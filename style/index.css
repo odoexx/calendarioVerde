@@ -1,0 +1,45 @@
+body{
+    background-color:beige;
+}
+
+.navbar{
+    background-color: aquamarine;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+
+.bienvenida{
+    text-align: center;
+}
+
+.bienvenida img{
+    width: 600px;
+}
+
+.toastr a{
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(76, 216, 94);
+    min-width: 300px;
+    min-height: 30px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    bottom: 70px;
+    right: 30px;
+    border: solid 2px rgb(40, 112, 49);
+}
+
+.publicar{
+    text-decoration: none;
+    color: #000000;
+}
+
+.toastr a:hover{
+    color: #ffffff;
+    background-color: rgb(40, 112, 49);
+    border: solid 2px rgb(76, 216, 94);
+}
