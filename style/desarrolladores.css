@@ -1,0 +1,13 @@
+.slide{
+    margin-top: 10px;
+}
+
+.slide img{
+    height: 65vh;
+    width: 75vw;
+}
+
+.mision{
+    text-align: center;
+    margin: 50px;
+}
