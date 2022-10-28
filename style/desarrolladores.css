@@ -7,6 +7,16 @@
     width: 75vw;
 }
 
+.carousel-item img{
+    margin-left: 25%;
+}
+
+.text{
+    color: black;
+    font-size:2vh;
+    margin-bottom: 0px;
+}
+
 .mision{
     text-align: center;
     margin: 50px;
