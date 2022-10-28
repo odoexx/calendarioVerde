@@ -10,8 +10,20 @@ body{
     width: 100px;
 }
 
+.nav-item{
+    font-size: 25px;
+}
+
 .bienvenida{
     text-align: center;
+}
+
+.bienvenida h2{
+    margin-top: 5px;
+}
+
+.bienvenida h1{
+    font-size: 100px;
 }
 
 .bienvenida img{
@@ -28,8 +40,8 @@ body{
     min-height: 30px;
     border-radius: 10px;
     padding: 10px 15px;
-    bottom: 70px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     border: solid 2px rgb(40, 112, 49);
 }
 
