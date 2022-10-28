@@ -7,7 +7,7 @@ body{
 }
 
 .navbar-brand img{
-    width: 100px;
+    width: 45px;
 }
 
 .nav-item{
@@ -48,6 +48,7 @@ body{
 .publicar{
     text-decoration: none;
     color: #000000;
+    font-size: 25px;
 }
 
 .toastr a:hover{
