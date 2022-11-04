@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/ecoHuella.css">
+    <title>Huella de Carbono</title>
+</head>
+<div class="bienvenida">
+    <h1>INICIO </h1>
+    <h2>¿Tiene artefactos electronicos?</h2>
+    <input type="checkbox" id="OPCION" value="SI">
+    <label for="OPCION"> Si tengo</label><br>
+    <input type="checkbox" name="OPCION" value="NO">
+    <label for="OPCION"> No tengo</label><br>
+    <h2> Indique cuantas horas en promedio los utiliza</h2>
+    <input type="number" id="HORAS">
+    <label for="HORAS"> PC de escritorio</label><br>
+    <input type="number" id="HORAS">
+    <label for="HORAS"> PC portatil</label><br>
+    <input type="number" id="HORAS">
+    <label for="HORAS"> Televisor</label><br>
+    
+    <div class="logoHuella" >
+      <a href="#"  onClick=
+
+      "if (document.getElementById('HORAS').value>0){
+          window.location='#calcu1';
+      }else alert('¿Cuántas horas?');">SIGUIENTE</a>
+      <a href="index.html">CANCELAR</a>
+    </div>
+  </div>
