@@ -19,14 +19,15 @@ body{
 }
 
 .bienvenida h2{
-    margin-top: 5px;
+    margin-top: 10px;
+    
 }
 
 .bienvenida h1{
     font-size: 100px;
 }
 
-.bienvenida img{
+.bienvenida img {
     width: 600px;
 }
 
