@@ -1,9 +1,13 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Balsamic Sans';
+}
 body{
     background-color:beige;
 }
 
 .navbar{
-    background-color: aquamarine;
+    background-color: #71cc87;
 }
 
 .navbar-brand img{
