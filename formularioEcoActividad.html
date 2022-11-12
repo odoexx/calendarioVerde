@@ -42,65 +42,95 @@
         <form class="row g-3 mt-3">
             <div class="col-12">
                 <label for="nombreInput" class="from-label"> Nombre de la Eco-Actividad</label>
-                <input type="text" class="form-control" id="nombreInput" placeholder="">
+                <input type="text" class="form-control" id="nombreInput" required>
             </div>
 
             <div class="col-6">
                 <label for="fechaInput" class="from-label">Fecha de la Eco-Actividad</label>
-                <input type="date" class="form-control" id="fechaInput">
+                <input type="date" class="form-control" id="fechaInput" required>
             </div>
 
             <div class="col-6">
                 <label for="horaInput" class="from-label">Hora de la Eco-Actividad</label>
-                <input type="time" class="form-control" id="horaInput" placeholder="Escribe tu direccion">
+                <input type="time" class="form-control" id="horaInput" required>
             </div>
 
             <div class="col-6">
                 <label for="ubiInput" class="from-label">Ubicacion</label>
-                <input type="text" class="form-control" id="ubiInput" placeholder="">
+                <input type="text" class="form-control" id="ubiInput" required>
             </div>
 
-            <div class="col-6">
+            <div class="col-6 mb-3">
                 <label for="departamentoInput" class="from-label">Departamento</label>
-                <input type="text" class="form-control" id="departamentoInput" placeholder="">
+                <select class="form-select" id="departamentoInput" required>
+                  <option selected disabled value=""></option>
+                  <option value="1">Santa Catalina</option>
+                  <option value="2">Rinconada</option>
+                  <option value="3">Cochinoca</option>
+                  <option value="4">Humahuaca</option>
+                  <option value="5">Susques</option>
+                  <option value="6">Tumbaya</option>
+                  <option value="7">Tilcara</option>
+                  <option value="8">Valle Grande</option>
+                  <option value="9">Dr. Manuel Belgrano</option>
+                  <option value="10">San Antonio</option>
+                  <option value="11">Palpala</option>
+                  <option value="12">San Pedro</option>
+                  <option value="13">El Carmen</option>
+                  <option value="14">Santa Barbara</option>
+                  <option value="15">Yavi</option>
+                </select>
             </div>
 
             <div class="col-12">
                 <label for="detelleInput" class="from-label">Detalles de la Eco-Actividad</label>
-                <input type="text" class="form-control" id="detelleInput" placeholder="">
+                <input type="text" class="form-control" id="detelleInput" required>
             </div>
 
             <h3 class="titulo">Datos del Encargado</h3>
 
             <div class="col-6">
                 <label for="nombreInput" class="from-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreInput" placeholder="">
+                <input type="text" class="form-control" id="nombreInput" required>
             </div>
 
             <div class="col-6">
                 <label for="apellidoInput" class="from-label">Apellido</label>
-                <input type="text" class="form-control" id="apellidoInput" placeholder="">
+                <input type="text" class="form-control" id="apellidoInput" required>
             </div>
 
             <div class="col-6">
                 <label for="dniInput" class="from-label">DNI</label>
-                <input type="number" class="form-control" id="dniInput" placeholder="">
+                <input type="number" class="form-control" id="dniInput" required>
             </div>
 
             <div class="col-6">
                 <label for="telefonoInput" class="from-label">Numero de telefono</label>
-                <input type="number" class="form-control" id="telefonoInput" placeholder="">
+                <input type="number" class="form-control" id="telefonoInput" required>
             </div>
 
             <div class="col-12">
                 <label for="gmailInput" class="from-label">Gmail</label>
-                <input type="email" class="form-control" id="gmailInput" placeholder="">
+                <input type="email" class="form-control" id="gmailInput" required>
             </div>
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Terminos y condiciones
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">aca van lo terminos y condiciones</div>
+                  </div>
+                </div>
+              </div>
 
             <div class="col-12">
                 <div class="from-check">
-                    <input type="checkbox" class="form-check-input" id="CheckTerms">
-                    <label for="CheckTerms" class="form-check-label"> Acepto los terminos</label>
+                    <input type="checkbox" class="form-check-input" id="CheckTerms" required>
+                    <label for="CheckTerms" class="form-check-label"> Lei y acepto los terminos y condiciones</label>
                 </div>
             </div>
 
