@@ -2,20 +2,71 @@
     box-sizing: border-box;
     font-family: 'Balsamic Sans';
 }
-.logoHuella img{
-    width: 300px;
+header{
+    text-align: center;
+    background: #71cc87;
+    color: #fff;
+    padding: 20px ;
     
+}
+.calculadora{
+    text-align: center;
+    display: flex;
+    margin: 5%;
+}
+
+ h3{
+    margin-top: 10px;
+    font-size:230%;
+    margin: 3%; 
+}
+
+.calculadora h1{
+    font-size: 100px;
+   
+}
+
+.calculadora img {
+    width: 10vw;
+}
+.titulos{
+    flex-direction: column;
+    display: flex;
+    width: 80%;
+    text-align: center;
+}
+.titulos a:hover{
+    background: #000;
+    color: #fff;
+}
+.titulos a{
+    background: #76d776;
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    
+    font-size:200%; 
+    margin: auto;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.titulos section{
+    margin: auto;
 }
 .Preguntas {
  max-width: 700px;
  margin: auto;
  padding: 20px;
 }
+
 section{
-    border: 2px solid #71cc87;
+    border: 8px solid #71cc87;
     border-radius: 7px;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px ;
+    font-size: 120%;
 }
 label{
     display: block;
@@ -24,13 +75,14 @@ label{
     cursor: pointer;
     border: 1px dashed #ccc;
     margin-bottom: 3px;
+    margin: auto;
 
 }
 label:hover{
     background: #96c480;
 }
 button{
-    width: 80%;
+    width: 40%;
     display: block;
     margin: auto;
     padding: 10px;
@@ -39,15 +91,21 @@ button{
     border: none;
     cursor: pointer;
     border-radius: 20px;
+    margin-top: 10px;
+   
+    font-size:150%; 
 }
 button:hover{
     background: #000;
     color: #fff;
 }
 h2{
-    text-align: center;
+    text-align: center; 
+
 }
-#resultado{
-    font-size: 30px;
+#resultado,#resultado2,#resultado3,#total {
+    font-size: 50px;
     color: darkgreen;
+    
+    
 }
