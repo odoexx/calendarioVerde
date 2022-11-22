@@ -48,10 +48,12 @@ function corregir(){
      total1=total1+(focos*1.38);
      total1=total1+(lampara*13.8);
 
-
-    document.getElementById("resultado").innerHTML=total1;
+     document.getElementById("resultado1").value = total1;
+     
+   //document.getElementById("resultado1").innerHTML=total1;
     
 }
+
 function corregir2(){
   total2=0;
   var estufa=document.getElementById("p1").value;
@@ -60,7 +62,7 @@ function corregir2(){
   var aire=document.getElementById("p4").value;
   total2=total2+(estufa*50.02)+(caloventor*92.34)+(ventilador*5.9)+(aire*66.46);
 
-  document.getElementById("resultado2").innerHTML=total2;
+  document.getElementById("resultado2").value=total2;
 
 }
 function corregir3(){
@@ -74,7 +76,7 @@ function corregir3(){
   }else if(transporte==3){
     total3=total3+(56*dias*km*(3/100)*2.37);
   }
-  document.getElementById("resultado3").innerHTML=total3;
+  document.getElementById("resultado3").value=total3;
 }
 function calculoFinal(){
   //total=0;
