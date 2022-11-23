@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="./style/ecoHuella.css">
     <title>Consumo Combustible Transporte</title>
 </head>
+<style>
+   #Progress_Status {
+     width: 50%;
+     background-color: #ddd;
+     width: auto;
+   }
+     
+   #myprogressBar {
+     width: 2%;
+     height: 20px;
+     background-color: #76d776;
+   }
+   </style>
 <body>
     <header>
         <h1>3. Consumo Combustible por Transporte</h1>
@@ -41,14 +54,70 @@
     </div>
     <div clase="titulos">
         <button onclick="corregir3()">CALCULAR</button>
-        <h2>Total: <span id="resultado3"></span></h2>
-        <form action="cuestionario2.html">
+        <h2>Total 3 : <input name="resultado3" id="resultado3"></input></h2>
+        <h2>Total 2 : <input name="resultado2" id="resultado2"></input></h2>
+        <h2>Total 1 : <input name="resultado1" id="resultado1"></input></h2>
+        
+         <!---->
+         <br><br><br><br><br><br>
+        <section>
+           <h2>HUELLA</h2>
+           <h2><span name="total" id="total">0.00</span></h2> 
+           <div id="Progress_Status">
+            <div id="myprogressBar"></div>
+           </div>
+           <h2><span id="porsentaje"> </span></h2><br>
+           <button onclick="final()">RESULTADO FINAL</button> <br><br><br>
+           <h2><span id="text"></span></h2>
+           <H2>¿Quieres mejorar tu huella de carbono?</H2>
+       </section>  
+       <form action="cuestionario2.html">
          <button>ATRAS</button>
-        </form>
-        </div>
-        <button onclick="calculoFinal()">RESULTADOS</button>
-        <h2>RESULTADOS FINALES:    <span id="total"></span></h2>
-    
+       </form>   
+      </div>
+
+   
+    <script type="text/javascript">
+      var porsentaje;
+      var total;
+      var url_string = window.location.href; //
+      var url = new URL(url_string);
+      var resultado2 = url.searchParams.get("resultado2");
+      document.getElementById("resultado2").value = resultado2;
+
+      var resultado1 = url.searchParams.get("resultado1");
+      document.getElementById("resultado1").value = resultado1;
+      
+     function final(){
+      var resultado3=document.getElementById("resultado3").value;
+      total=(parseInt(resultado2,10)+ parseInt(resultado1,10)+parseInt(resultado3,10));//+parseInt(document.getElementById("resultado3").value,10));
+      document.getElementById("total").innerHTML = total+' '+ 'kgCO2';
+
+      porsentaje=(total*100)/12000;       
+       var element = document.getElementById("myprogressBar");   
+        var tota
+        var width = 1;
+        var identity = setInterval(scene, 10);
+        function scene() {
+          if (width >= 100) {
+            clearInterval(identity);
+          } else {
+            width=porsentaje; 
+            element.style.width = width + '%'; 
+            document.getElementById("porsentaje").innerHTML=parseInt(width,10)+'%';
+          }
+        }
+        if(porsentaje>50){
+         document.getElementById("text").innerHTML= 'Esto significa que tu huella es muy alta';
+        }else if(porsentaje<50){
+         document.getElementById("text").innerHTML= '¡Felicidades! Esto significa que tu huella es baja';
+        }else if(porsentaje==50){
+         document.getElementById("text").innerHTML= ' Esto significa que tu huella esta a apunto de ser alta ';
+
+        }
+        
+      }
+      </script>
       <script src="calculos.js"></script>
-</body>
+  </body>
 </html>

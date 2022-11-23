@@ -74,14 +74,29 @@
     </div>
     <div clase="titulos">
         <button onclick="corregir2()">CALCULAR</button>
-        <h2>Total: <span id="resultado2"></span></h2>
+         <form action="cuestionario3.html" method="get">
+            <!--<span id="resultado" name="resultado" ></span>-->
+            <h2>Total 2 :<input name="resultado2" id="resultado2"></input> </h2>
+            <h2>Total 1 :<input name="resultado1" id="resultado1"></input></h2>
+
+            <button>SIGUIENTE</button>
+          </form>
         <form action="cuestionario.html">
          <button>ATRAS</button>
         </form>
-        <form action="cuestionario3.html">
-          <button>SIGUIENTE</button>
-        </form>
+        
       </div>
+      
+     <!---->
+     
+     <script type="text/javascript">
+      var url_string = window.location.href; //
+      var url = new URL(url_string);
+      var c = url.searchParams.get("resultado1");
+      document.getElementById("resultado1").value= c;
+      
+      </script>
+      
       <script src="calculos.js"></script>
 </body>
 </html>

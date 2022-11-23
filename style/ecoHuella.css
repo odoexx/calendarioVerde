@@ -67,6 +67,7 @@ section{
     padding: 10px;
     margin: 10px ;
     font-size: 120%;
+    
 }
 label{
     display: block;
@@ -80,6 +81,12 @@ label{
 }
 label:hover{
     background: #96c480;
+}
+form input,h2 input{
+    border:#fff;
+}
+.pantalla_final form{
+    height: 100vh;
 }
 button{
     width: 40%;
@@ -96,6 +103,7 @@ button{
     font-size:150%; 
 }
 button:hover{
+
     background: #000;
     color: #fff;
 }
@@ -103,9 +111,16 @@ h2{
     text-align: center; 
 
 }
-#resultado,#resultado2,#resultado3,#total {
+#resultado1,#resultado2,#resultado3,#total,#text {
+    width: 10%;
     font-size: 50px;
     color: darkgreen;
     
+
     
+    
+}
+label {
+    padding-right: 10px;
+    font-size: 1rem;
 }

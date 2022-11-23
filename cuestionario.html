@@ -88,20 +88,26 @@
     </label>
   </section>
 </div>
+
 <div clase="titulos">
   <button onclick="corregir()">CALCULAR</button>
   <!--<button href="#"  onClick=
   "if (document.getElementById('p1').value>0){
    window.location='#calcu1';
   }else alert('¿Cuántas horas?');">SIGUIENTE</button>-->
-  <h2>Total: <span id="resultado"></span></h2>
+  
+       <form action="cuestionario2.html" method="get">
+      <!--<span name="resultado1" id="resultado1"></span> -->
+      <h2>Total:<input name="resultado1" id="resultado1"></h2>
+      <button>SIGUIENTE</button>
+    </form>
+
   <form action="huellaCarbono.html">
    <button>ATRAS</button>
   </form>
-  <form action="cuestionario2.html">
-    <button>SIGUIENTE</button>
-  </form>
+  
 </div>
+
 <script src="calculos.js"></script>
     
   
