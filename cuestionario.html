@@ -6,93 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/ecoHuella.css">
-    <title>Huella de Carbono</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Consumo de Artefactos Electronicos</title>
 </head>
+<div class="container-fluid" id="header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+  
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ecoActividades.html">Eco-Actividades</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page"href="huellaCarbono.html">Huella de Carbono</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="desarrolladores.html">Institucional</a>
+            </li>
+         </ul>
+       </div>
+     </div>
+ </nav>
+</div>
+<p class="main">
+</p>
+<header>
+  <h3>1. Consumo de Artefactos Electronicos</h3>
+  <h2>En este primer apartado se estimaran las emisiones por el consumo de energia electrica </h2>
+  <h2>de los artefactos que utiliza diariamente en sus actividades.</h2>
+</header>
+<body>
 <div class="Preguntas">
-    <h1>INICIO </h1>
     <section id="p0">
     <h2>¿Tiene artefactos electronicos?</h2>
     <label>
-      <input type="radio" value="1" name="p0" > Si tengo
+      <input type="radio" value="1" name="p0" onclick="respuesta(1,this)"> Si 
     </label>
     <label>
-      <input type="radio" value="2" name="p0" > No tengo
+      <input type="radio" value="2" name="p0" onclick="respuesta(1,this)"> No 
     </label>
   </section>
   <section>
     <h2> 1. Indique cuantas horas en promedio los utiliza</h2>
     <label>
-      <input type="number" values="1" name="p1" id="p1" onclick="respuesta(1,this)"> PC de escritorio
+      <input type="number" id="p1" min="0" max="10"> PC de escritorio
     </label>
     <label>
-      <input type="number" values="2" name="p2" id="p2" onclick="respuesta(2,this)"> PC portatil
+      <input type="number" id="p2" min="0" max="10" > PC portatil
     </label>
     <label>
-      <input type="number" values="3" name="p3" id="p3" onclick="respuesta(3,this)"> Televisor
+      <input type="number" id="p3" min="0" max="10" > Televisor
     </label>
   </section>
   <section>
     <h2> 2. Señale el tipo de Heladera que utiliza</h2>
     <label>
-      <input type="radio" value="1" name="p4" id="p4" onclick="respuesta(4,this)"> Clase A+
+      <input type="radio"   value="1" id="p4" name="heladera" onclick="respuesta(2,this)"> Clase A+
     </label>
     <label>
-      <input type="radio" value="2" name="p4" id="p4" onclick="respuesta(4,this)"> Clase A 
+      <input type="radio"  value="2" id="p4" name="heladera" onclick="respuesta(2,this)"> Clase A 
     </label>
     <label>
-      <input type="radio" value="3" name="p4" id=p4 onclick="respuesta(4,this)"> Clase B
+      <input type="radio" value="3" id="p4"  name="heladera" onclick="respuesta(2,this)"> Clase B
     </label>
   </section>
   <section>
     <h2>3. Señale el tipo de lavarropas que posee </h2>
     <label>
-      <input type="radio" value="1" name="p5" id="p5" onclick="respuesta(5,this)"> Automatico
+      <input type="radio" value="1" name="lavarropas" id="p7" onclick="respuesta(3,this)"> Automatico
     </label>
     <label>
-      <input type="radio" value="2" name="p5" id="p5" onclick="respuesta(5,this)"> Automatico con calentamiento de agua
+      <input type="radio" value="2" name="lavarropas" id="p7" onclick="respuesta(3,this)"> Automatico con calentamiento de agua
     </label>
     <label>
-      <input type="radio" value="3" name="p5" id="p5" onclick="respuesta(5,this)"> Semiautomatico
+      <input type="radio" value="3" name="lavarropas" id="p7" onclick="respuesta(3,this)"> Semiautomatico
     </label>
   </section>
     <section>
       <h2>  Periodo de uso</h2>
       <label>
-        <input type="number" values="1" name="p6" id="p6" onclick="respuesta(6,this)"> Cantidad de veces a la semana
+        <input type="number" values="1" id="p8"  min="0" max="20"> Cantidad de veces a la semana
       </label>
       <label>
-        <input type="number" values="2" name="p7" id="p7" onclick="respuesta(7,this)"> Horas de uso al dia
+        <input type="number" values="2" id="p9"  min="0" max="24"> Horas de uso al dia
       </label>
     </section>
   <section>
     <h2> 4. En el caso que utilize Pava electrica, indique el tiempo de uso en minutos</h2>
     <label>
-      <input type="number" value="1" name="p8" id="p8" onclick="respuesta(8,this)"> minutos
+      <input type="number"  id="p10"  min="0" max="60"> minutos
     </label>
     <h2>5. En el caso que utilize Microondas, indique el tiempo de uso en minutos</h2>
     <label>
-      <input type="number" value="1" name="p9" id="p9" onclick="respuesta(9,this)"> minutos
+      <input type="number" id="p11"  min="0" max="60"> minutos
     </label>
   </section>
   <section>
     <h2> 6.¿Cuantos focos o laparas incandescentes tiene?</h2>
     <label>
-      <input type="number" values="1" name="p10" id="p10" onclick="respuesta(10,this)"> Focos
+      <input type="number" id="p12" min="0" max="60"> Focos
     </label>
     <label>
-      <input type="number" values="2" name="p11" id="p11" onclick="respuesta(11,this)"> Lamparas
+      <input type="number" id="p13" min="0" max="60"> Lamparas
     </label>
   </section>
 </div>
-<button onclick="corregir()">CALCULAR</button>
-<!--<button href="#"  onClick=
-"if (document.getElementById('p1').value>0){
- window.location='#calcu1';
-}else alert('¿Cuántas horas?');">SIGUIENTE</button>-->
-<h2>Resultados: <span id="resultado"></span></h2>
-<form action="index.html">
-<button>CANCELAR</button>
-</form>
+
+<div clase="titulos">
+  <button onclick="corregir()">CALCULAR</button>
+  <!--<button href="#"  onClick=
+  "if (document.getElementById('p1').value>0){
+   window.location='#calcu1';
+  }else alert('¿Cuántas horas?');">SIGUIENTE</button>-->
+  
+       <form action="cuestionario2.html" method="get">
+      <!--<span name="resultado1" id="resultado1"></span> -->
+      <h2>Total:<input name="resultado1" id="resultado1"></input></h2>
+      <button>SIGUIENTE</button>
+    </form>
+
+  <form action="huellaCarbono.html">
+   <button>ATRAS</button>
+  </form>
+  
+</div>
+</body>
 <script src="calculos.js"></script>
     
   

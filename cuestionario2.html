@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/ecoHuella.css">
+    <title>2. Consumo Calefaccion Refrigeracion</title>
+</head>
+<body>
+    <header>
+  <h1>2. Consumo Calefaccion y Refrigeracion</h1>
+  <h2>En este apartado se estimaran las emisiones asociadas al consumo de gas y/o energia </h2>
+  <h2>electrica para la climatizacion de las oficias.</h2>
+    </header>
+    <div class="Preguntas">
+        <h3> Calefaccion en Invierno</h3>
+     <section >
+        <h2>1. ¿Utiliza estufa a gas?</h2>
+        <label>
+         <input type="radio" value="1" name="estufa" onclick="respuesta(4,this)"> Si 
+        </label>
+        <label>
+         <input type="radio" value="2" name="estufa" onclick="respuesta(4,this)"> No 
+        </label>
+        <h2> ¿Cuantas horas al dia?</h2>
+        <label>
+        <input type="number" id="p1" min="0" max="24" > 
+        </label>
+     </section>
+     <section>
+        <h2>2. ¿Utiliza caloventor electrico?</h2>
+        <label>
+         <input type="radio" value="1" name="caloventor" onclick="respuesta(5,this)"> Si 
+        </label>
+        <label>
+         <input type="radio" value="2" name="caloventor" onclick="respuesta(5,this)"> No 
+        </label>
+        <h2> ¿Cuantas horas al dia?</h2>
+        <label>
+        <input type="number" id="p2" min="0" max="24" > 
+        </label>
+     </section>
+     
+     <h3>Refrigeracion en Verano </h3>
+     <section >
+        <h2>3. ¿Utiliza ventilador?</h2>
+        <label>
+         <input type="radio" value="1" name="ventilador" onclick="respuesta(6,this)"> Si 
+        </label>
+        <label>
+         <input type="radio" value="2" name="ventilador" onclick="respuesta(6,this)" >No 
+        </label>
+        <h2> ¿Cuantas horas al dia?</h2>
+        <label>
+        <input type="number" id="p3" min="0" max="24" > 
+        </label>
+     </section>
+     <section id="p0">
+        <h2>4. ¿Utiliza aire acondicionado?</h2>
+        <label>
+         <input type="radio" value="1" name="aire" onclick="respuesta(7,this)"> Si 
+        </label>
+        <label>
+         <input type="radio" value="2" name="aire" onclick="respuesta(7,this)"> No 
+        </label>
+        <h2> ¿Cuantas horas al dia?</h2>
+        <label>
+        <input type="number" id="p4" min="0" max="24" > 
+        </label>
+     </section>
+     
+    </div>
+    <div clase="titulos">
+        <button onclick="corregir2()">CALCULAR</button>
+         <form action="cuestionario3.html" method="get">
+            <!--<span id="resultado" name="resultado" ></span>-->
+            <h2>Total 2 :<input name="resultado2" id="resultado2"></input> </h2>
+            <h2>Total 1 :<input name="resultado1" id="resultado1"></input></h2>
+
+            <button>SIGUIENTE</button>
+          </form>
+        <form action="cuestionario.html">
+         <button>ATRAS</button>
+        </form>
+        
+      </div>
+      
+     <!---->
+     
+     <script type="text/javascript">
+      var url_string = window.location.href; //
+      var url = new URL(url_string);
+      var c = url.searchParams.get("resultado1");
+      document.getElementById("resultado1").value= c;
+      
+      </script>
+      
+      <script src="calculos.js"></script>
+</body>
+</html>

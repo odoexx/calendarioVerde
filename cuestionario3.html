@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/ecoHuella.css">
+    <title>Consumo Combustible Transporte</title>
+</head>
+<style>
+   #Progress_Status {
+     width: 50%;
+     background-color: #ddd;
+     width: auto;
+   }
+     
+   #myprogressBar {
+     width: 2%;
+     height: 20px;
+     background-color: #76d776;
+   }
+   </style>
+<body>
+    <header>
+        <h1>3. Consumo Combustible por Transporte</h1>
+        <h2>En este apartado se estimaran las emisiones por el consumo de combustible, a partir de los kilometros totales(Km) </h2>
+        <h2>que realiza en el dia para trasladarse de su casa a otro lugar, en el transcurso de un año.</h2>
+    </header> 
+    <div class="Preguntas">
+        <section >
+           <h2>1. ¿Que medio de transporte utiliza?</h2>
+         <label>
+            <input type="radio" value="1" name="transporte" onclick="respuesta(8,this)"> Vehiculo a Nafta
+         </label>
+         <label>
+            <input type="radio" value="2" name="transporte" onclick="respuesta(8,this)"> Vehiculo Diesel (gasolero)
+         </label>
+         <label>
+            <input type="radio" value="3" name="transporte" onclick="respuesta(8,this)"> Moto
+         </label>
+         <label>
+            <input type="radio" value="4" name="transporte" onclick="respuesta(8,this)"> Colectivo
+         </label>
+        <h2> ¿Cuantas veces viaja a la semana?</h2>
+         <label>
+            <input type="number" id="p1" min="0" max="100" > 
+         </label>
+        <h2> ¿Cuantos km recorre ?</h2>
+         <label>
+            <input type="number" id="p2" min="0" max="100" > 
+         </label>
+        </section>
+    </div>
+    <div clase="titulos">
+        <button onclick="corregir3()">CALCULAR</button>
+        <h2>Total 3 : <input name="resultado3" id="resultado3"></input></h2>
+        <h2>Total 2 : <input name="resultado2" id="resultado2"></input></h2>
+        <h2>Total 1 : <input name="resultado1" id="resultado1"></input></h2>
+        
+         <!---->
+         <br><br><br><br><br><br>
+        <section>
+           <h2>HUELLA</h2>
+           <h2><span name="total" id="total">0.00</span></h2> 
+           <div id="Progress_Status">
+            <div id="myprogressBar"></div>
+           </div>
+           <h2><span id="porsentaje"> </span></h2><br>
+           <button onclick="final()">RESULTADO FINAL</button> <br><br><br>
+           <h2><span id="text"></span></h2>
+           <H2>¿Quieres mejorar tu huella de carbono?</H2>
+           <button onclick="recomendaciones()">SI</button>
+            <div class="titulos">
+                <a><h2 id="recomendaciones"></h2></a>
+            </div>
+       </section>  
+       <form action="cuestionario2.html">
+         <button>ATRAS</button>
+       </form>   
+      </div>
+
+   
+    <script type="text/javascript">
+      var porsentaje;
+      var total;
+      var url_string = window.location.href; //
+      var url = new URL(url_string);
+      var resultado2 = url.searchParams.get("resultado2");
+      document.getElementById("resultado2").value = resultado2;
+
+      var resultado1 = url.searchParams.get("resultado1");
+      document.getElementById("resultado1").value = resultado1;
+      
+     function final(){
+      var resultado3=document.getElementById("resultado3").value;
+      total=(parseInt(resultado2,10)+ parseInt(resultado1,10)+parseInt(resultado3,10));//+parseInt(document.getElementById("resultado3").value,10));
+      document.getElementById("total").innerHTML = total+' '+ 'kgCO2';
+
+      porsentaje=(total*100)/12000;       
+       var element = document.getElementById("myprogressBar");   
+        var tota
+        var width = 1;
+        var identity = setInterval(scene, 10);
+        function scene() {
+          if (width >= 100) {
+            clearInterval(identity);
+          } else {
+            width=porsentaje; 
+            element.style.width = width + '%'; 
+            document.getElementById("porsentaje").innerHTML=parseInt(width,10)+'%';
+          }
+        }
+        if(porsentaje>50){
+         document.getElementById("text").innerHTML= 'Esto significa que tu huella es muy alta';
+        }else if(porsentaje<50){
+         document.getElementById("text").innerHTML= '¡Felicidades! Esto significa que tu huella es baja';
+        }else if(porsentaje==50){
+         document.getElementById("text").innerHTML= ' Esto significa que tu huella esta a apunto de ser alta ';
+
+        }
+        
+      }
+      function recomendaciones(){
+        document.getElementById("recomendaciones").innerHTML='Aqui va los tips para la huella de carbono\n';
+        document.getElementById("recomendaciones").innerHTML='uno';
+      }
+      </script>
+      <script src="calculos.js"></script>
+  </body>
+</html>
