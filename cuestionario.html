@@ -6,13 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/ecoHuella.css">
+    <link rel="stylesheet" href="./style/index.css">
     <title>Consumo de Artefactos Electronicos</title>
 </head>
+<div class="container-fluid" id="header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+  
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ecoActividades.html">Eco-Actividades</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page"href="huellaCarbono.html">Huella de Carbono</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="desarrolladores.html">Institucional</a>
+            </li>
+         </ul>
+       </div>
+     </div>
+ </nav>
+</div>
+<p class="main">
+</p>
 <header>
-  <h1>1. Consumo de Artefactos Electronicos</h1>
+  <h3>1. Consumo de Artefactos Electronicos</h3>
   <h2>En este primer apartado se estimaran las emisiones por el consumo de energia electrica </h2>
   <h2>de los artefactos que utiliza diariamente en sus actividades.</h2>
 </header>
+<body>
 <div class="Preguntas">
     <section id="p0">
     <h2>¿Tiene artefactos electronicos?</h2>
@@ -98,7 +130,7 @@
   
        <form action="cuestionario2.html" method="get">
       <!--<span name="resultado1" id="resultado1"></span> -->
-      <h2>Total:<input name="resultado1" id="resultado1"></h2>
+      <h2>Total:<input name="resultado1" id="resultado1"></input></h2>
       <button>SIGUIENTE</button>
     </form>
 
@@ -107,7 +139,7 @@
   </form>
   
 </div>
-
+</body>
 <script src="calculos.js"></script>
     
   

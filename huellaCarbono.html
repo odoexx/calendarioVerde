@@ -1,60 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/index.css">
-    <link rel="stylesheet" href="./style/ecoHuella.css">
-    <title>Huella de Carbono</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/ecoHuella.css">
+  <title>Huella de Carbono</title>
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"> <img src="./img/logo.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="ecoActividades.html">Eco-Actividades</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="huellaCarbono.html">Huella de Carbono</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="desarrolladores.html">Institucional</a>
-                </li>
-              </ul>
-            </div>
-        </div>
-      </nav>
 
-      <div class="calculadora">
-        <div class="logoHuella">
-          <img src="./img/EcoHuella.png" alt="logo">  
-        </div>
-        <div class="titulos">
-          <h1>ECO-HUELLA </h1>
-          <h3>Calcula tu huella de carbono personal</h3>
-          <a href="cuestionario.html">1. Consumo Artefactos ElectronicoS</a>
-          <a href="#" >2. Consumo Calefaccion y Refrigeracion</a>
-          <a href="#" >3. Consumo Combustible por traNsporte</a>
-          <form action="cuestionario.html">
-            <button>COMENZAR</button>
-             
-          </form>
-                 
+  <div class="container-fluid" id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-        </div> 
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="ecoActividades.html">Eco-Actividades</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page" href="huellaCarbono.html">Huella de Carbono</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="desarrolladores.html">Institucional</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      
-      <script src="calculos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </nav>
+  </div>
+
+  <p class="main">
+  </p>
+  <div class="calculadora">
+    <div class="logoHuella">
+      <img src="./img/EcoHuella2.png" alt="logo">
+      <a href="#" class="botonModal">¿Que es la huella de Carbono?</a>
+
+    </div>
+    <div class="titulos">
+      <h1>ECO-HUELLA </h1>
+      <h3>Calcula tu huella de carbono personal</h3>
+      <a href="cuestionario.html">1. Consumo Artefactos Electronicos</a>
+      <a href="#" onclick=" alert('Complete la categoria 1.Consumo Artefactos Electronicos')">2. Consumo Calefaccion y Refrigeracion</a>
+      <a href="#" onclick=" alert('Complete la categoria 1.Consumo Artefactos Electronicos y 2.Consumo Calefaccion y Refrigeracion' )">3. Consumo Combustible por transporte</a>
+      <form action="cuestionario.html">
+        <button>COMENZAR</button>
+      </form>
+
+    </div>
+    <section class="modal ">
+      <div class="modal__container">
+        <img src="images/modal.svg" class="modal__img">
+        <h2 class="modal__title">¿HUELLA DE CARBONO?</h2>
+        <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nobis nisi
+          quibusdam doloremque expedita quae ipsam accusamus quisquam quas, culpa tempora. Veniam consectetur deleniti
+          maxime.</p>
+        <a href="#" class="modal__close">X</a>
+      </div>
+    </section>
+
+  </div>
+  <script>
+    const openModal = document.querySelector('.botonModal');
+    const modal = document.querySelector('.modal');
+    const closeModal = document.querySelector('.modal__close');
+
+    openModal.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('modal--show');
+    });
+
+    closeModal.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.remove('modal--show');
+    });
+  </script>
+  <script src="calculos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
