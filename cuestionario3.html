@@ -70,6 +70,10 @@
            <button onclick="final()">RESULTADO FINAL</button> <br><br><br>
            <h2><span id="text"></span></h2>
            <H2>¿Quieres mejorar tu huella de carbono?</H2>
+           <button onclick="recomendaciones()">SI</button>
+            <div class="titulos">
+                <a><h2 id="recomendaciones"></h2></a>
+            </div>
        </section>  
        <form action="cuestionario2.html">
          <button>ATRAS</button>
@@ -116,6 +120,10 @@
 
         }
         
+      }
+      function recomendaciones(){
+        document.getElementById("recomendaciones").innerHTML='Aqui va los tips para la huella de carbono\n';
+        document.getElementById("recomendaciones").innerHTML='uno';
       }
       </script>
       <script src="calculos.js"></script>
