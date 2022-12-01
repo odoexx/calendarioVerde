@@ -32,14 +32,16 @@ header{
 .calculadora img {
     width: 25vw;
 }
+.gif img{
+    width: 25vw;  
+    
+}
 
 .titulos{
     flex-direction: column;
     display: flex;
     width: 100%;
-    text-align: center;
-    
-    
+    text-align: center;  
 }
 .titulos a,.calculadora a:hover{
     background: #000;
@@ -73,9 +75,8 @@ header{
 section{
     border: 8px solid #302d2dda;
     border-radius: 7px;
-    padding: 10px;
-    margin: 10px ;
-    font-size: 120%;
+    padding: 10vh;
+    margin: 2vh;
     
 }
 label{
@@ -90,10 +91,6 @@ label{
 }
 label:hover{
     background: #96c480;
-}
-form input,h2 input{
-    border:beige;
-    background-color: beige;
 }
 .pantalla_final form{
     height: 100vh;
@@ -124,19 +121,13 @@ h2{
 #resultado1,#resultado2,#resultado3,#total,#text {
     width: 10%;
     font-size: 50px;
-    color: darkgreen;
-    
-
-    
-    
+    color: darkgreen;  
 }
 label {
     padding-right: 10px;
     font-size: 1rem;
 }
 /* ventana modal*/
-
-
 
 .modal__close{
     text-decoration: none;
@@ -193,3 +184,15 @@ label {
     transform: var(--transform);
     transition:var(--transition);
 }
+/* varras de progreso*/
+#Progress_Status {
+    width: 50%;
+    background-color: #ddd;
+    width: auto;
+  }
+    
+  #myprogressBar {
+    width: 1vh;
+    height: 30px;
+    background-color: #76d776;
+  }
